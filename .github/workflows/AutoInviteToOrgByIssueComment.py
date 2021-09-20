@@ -7,12 +7,12 @@ import sys
 import json
 import requests
 
-print("Hello, World")
+# print("Hello, World")
 
-if os.getenv('CI'):
-    print('Looks like GitHub!')
-else:
-    print('Maybe running locally?')
+# if os.getenv('CI'):
+#     print('Looks like GitHub!')
+# else:
+#     print('Maybe running locally?')
 
 print("Environ:")
 print(os.environ)
@@ -25,18 +25,18 @@ COMMUNITY_TEAM_ID = os.environ['COMMUNITY_TEAM_ID']
 file = open(os.environ['GITHUB_EVENT_PATH'])
 data = json.load(file)
 
-print("Data:")
-print(data)
+# print("Data:")
+# print(data)
 
 COMMENT = data["comment"]["body"]
 USERNAME = data["comment"]["user"]["login"]
 
-if ".invite @" not in COMMENT and ".invite me" not in COMMENT:
+if ".raisehigh @" not in COMMENT and ".raisehigh me" not in COMMENT:
   sys.exit()
 else:
 
-  if ".invite @" in COMMENT:
-    USERNAME = COMMENT.replace(".invite @", "")
+  if ".raisehigh @" in COMMENT:
+    USERNAME = COMMENT.replace(".raisehigh @", "")
 
   print('Send invite for the @'+USERNAME)
 
