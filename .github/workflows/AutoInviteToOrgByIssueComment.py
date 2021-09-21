@@ -31,12 +31,12 @@ data = json.load(file)
 COMMENT = data["comment"]["body"]
 USERNAME = data["comment"]["user"]["login"]
 
-if ".raisehigh @" not in COMMENT and ".raisehigh me" not in COMMENT:
+if "RaiseHigh @" not in COMMENT and "RaiseHigh me" not in COMMENT:
   sys.exit()
 else:
 
-  if ".raisehigh @" in COMMENT:
-    USERNAME = COMMENT.replace(".raisehigh @", "")
+  if "RaiseHigh @" in COMMENT:
+    USERNAME = COMMENT.replace("RaiseHigh @", "")
 
   print('Send invite for the @'+USERNAME)
 
