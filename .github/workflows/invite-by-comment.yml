@@ -1,6 +1,8 @@
 on:
-  issue_comment:
-    types: [created, edited]
+  # issue_comment:
+  #   types: [created, edited]
+  issues:
+    types: [opened]
 name: Invite a new user by comment
 jobs:
     build:
