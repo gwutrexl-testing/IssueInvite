@@ -28,8 +28,8 @@ data = json.load(file)
 print("Data:")
 print(data)
 
-COMMENT = data["comment"]["body"]
-USERNAME = data["comment"]["user"]["login"]
+COMMENT = data["issue"]["title"]
+USERNAME = data["issue"]["user"]["login"]
 
 if "RaiseHigh @" not in COMMENT and "RaiseHigh me" not in COMMENT:
   sys.exit()
