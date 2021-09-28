@@ -14,10 +14,10 @@ import requests
 # else:
 #     print('Maybe running locally?')
 
-# print("Environ:")
-# print(os.environ)
-# print("Prefix:")
-# print(sys.prefix)
+print("Environ:")
+print(os.environ)
+print("Prefix:")
+print(sys.prefix)
 
 MY_GITHUB_KEY = os.environ['MY_GITHUB_KEY']
 COMMUNITY_TEAM_ID = os.environ['COMMUNITY_TEAM_ID']
